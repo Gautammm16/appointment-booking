@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* antd override */
+input{
+    border-radius: 2px !important;
+    border: 1px solid grey !important;
+    height: 40px !important;
+}
+input:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid grey !important;
+}
+
+.primary-button{
+    background-color: #005555 !important;
+    border-color: #005555 !important;
+    height: 40px !important;
+    width: 100% !important;
+    color: white !important;
+    font-size: 16px !important;
+}
+
+/* common styling */
+.card-title{
+    margin-top: 30px;
+    font-size:1.3rem ;
+    font-weight: 540;
+    text-align: center;
+}
+
+.normal-text{
+    font-size: 1rem;
+}
+.card{
+    box-shadow: 0,0,2px grey;
+    border-radius: 0 !important;
+
+}
+
+.redirect{
+    color: black !important;
+    text-decoration: none;
+    align-items: center;
+    font-size: 14px;
+    
+}
+.redirect:hover{
+    text-decoration: underline;
+}
+
+/* authentication pages */
+
+.authentication{
+    height: 80vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.authentication-form{
+    width: 400px;
+}
