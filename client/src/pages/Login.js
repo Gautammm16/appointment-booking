@@ -3,18 +3,26 @@ import {React} from 'react'
 import {Link, useNavigate} from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { showLoading,hideLoading } from '../redux/alertSlice';
+
 
 
 function Login ()  {
-  const navigation = useNavigate();
+  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
     const onFinish= async (values)=>{
       try {
+        dispatch(showLoading())
         const response = await axios.post('/api/user/login', values);
+        dispatch(hideLoading())
+
         if (response.data.success) {
           toast.success(response.data.message);
           toast("Redirect to home page")
           localStorage.setItem("token",response.data.data);
-          navigation('/')
+          navigate('/')
         } else {
           toast.error(response.data.message);
         }
